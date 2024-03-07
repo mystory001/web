@@ -1,0 +1,50 @@
+<!--231113-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test12.html</title>
+<!--p269 ~ 270  레이아웃 
+           1) 배치방법 display(block,inline,inline-block)
+           2) 왼쪽,오른쪽 어울리게 배치 float(left,right)
+                         해제  clear(left,right,both)
+           3) 위치 지정  left,rigth,top,bottom 속성
+              배치방법 position(static,relative,absolute,fixed)    
+       -->
+       <style>
+	 h1, p, div, span{
+		 border: 1px solid black;
+	 }  
+	 h1{
+		 /* block 큰영역 -> inline 작은영역 */
+		 display: inline;
+	 }
+	 span{
+		 display: block;
+	 }
+	 ul{
+		 list-style: none;
+	 }
+	 li{
+		 /* block 큰영역 => inline(4) -> block(1)*/
+		display: inline-block;
+		border: 1px solid black; 
+		padding: 20px;
+		margin: 0 20px;
+	 }
+	   </style>
+      
+</head>
+<body>
+	<ul>
+		<li>menu 1</li>
+		<li>menu 2</li>
+		<li>menu 3</li>
+		<li>menu 4</li>
+	</ul>
+<h1>제목</h1>
+<p>문단</p>
+<div>큰영역</div>
+<span>작은 영역</span>
+</body>
+</html>

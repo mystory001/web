@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html/test4.html</title>
+</head>
+<body>
+<h1>이미지 삽입</h1>
+<!--같은 폴더 안에 파일이 있어야함.-->
+<!--alt= " " 이미지가 없을 때 설명-->
+<p>웹에서 사용하는 이미지 형식<br>
+.jpg/.jpeg(사진 파일, 색상과 명암을 다양하게 표현)<br>
+.gif(색상수 최대 256가지를 이용, 크기가 작은 아이콘)<br>
+.png(다양한 색상을 표현, 투명 배경)</p><br>
+<p>이미지 크기 단위<br>
+디스플레이 해상도 : PX(빛의 점 단위) 많을수록 해상도가 좋다.<br>
+px : 이미지 크기를 픽셀단위로 지정, 고정값<br>
+% : 이미지 크기를 % 지정, 웹 브라우저 너비, 높이 기준으로 이미지 크기를 표시.<br>
+</p><br>
+
+<p>
+이미지 경로가 같은 폴더에 없는 경우<br>
+폴더명/파일명 : 같은 폴더 내에 있는 이미지가 있는 경우<br> 
+../폴더명/파일명 : 상위(부모) 폴더로 가기<br>
+../폴더명/폴더명/파일명 : 좀 더 상위 폴더에 이미지가 있는 경우<br>
+<!--.. 상위(부모)폴더	-->
+</p><br>
+<!--같은폴더에 있는 경우(test4.html 파일 기준으로 이미지 경로 찾기)-->
+
+<img src="1.jpg" width="400" height="400">
+<img src="2.jpg" width="40%" height="40%">
+<br>
+<h1>상대참조 이미지 경로 찾기(test4.html 현 파일 기준으로 이미지 경로찾기)</h1>
+<!--같은 폴더에 있지 않는 경우 1(상대 참조 이미지 경로 찾기)-->
+<img src="img/3.jpg">
+<img src="img/4.jpg"><br>
+<img src="../imgs/5.jpg">
+<img src="../imgs/6.jpg"><br>
+<!--같은 폴더에 있지 않는 경우 2(상대 참조 이미지 경로 찾기)-->
+<img src="../imgs/img/7.jpg" width="30%" height="250">
+<img src="../imgs/img/8.jpg" width="30%" height="250"><br>
+<!--11.jpg가 없을 때, alt=" " 큰따옴표 안 이미지가 없을 때 설명-->
+<img src="11.jpg" alt="없는 사진">
+
+<h1>절대참조(프로젝트를 기준) 이미지 찾기</h1>
+<!--http://localhost:8080/webProject/Html1/test4.html-->
+<!--http://localhost:8080/webProject/Html1/1jpg-->
+<!--/프로젝트/폴더1/폴더2/.../이미지.이미지형식-->
+<img src="/webProject/src/main/webapp/Html1/1.jpg" alt="경로가 잘못됨">
+<!--src/main/webapp이 Dynamic Web Project 생성시 Content directory로 세팅되어 있기 때문에-->
+<!--즉, webProject/.../폴더명/이미지파일에서 /.../에 src/main/webapp 있으며 생략되어있다 생각하자, -->
+<img src="/webProject/Html1/1.jpg">
+<img src="/webProject/Html1/2.jpg">
+<img src="/webProject/Html1/img/3.jpg">
+<img src="/webProject/Html1/img/4.jpg">
+<img src="/webProject/imgs/5.jpg">
+<img src="/webProject/imgs/6.jpg">
+<img src="/webProject/imgs/img/7.jpg">
+<img src="/webProject/imgs/img/8.jpg">
+<!--/ root-->
+
+</body>
+</html>

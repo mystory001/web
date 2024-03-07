@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/ex1.html</title>
+<!--p324-->
+<style>
+	/* 전체 영역 안여백, 밖여백 0px */
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	/* body 태그  배경색  #ccc, 안여백 20픽셀*/
+	body{
+		background-color: #ccc;
+		padding: 20px;
+	}
+	/* id="signup"  배경색 #fff, 테두리선 1px 실선 #222,
+	   모서리 둥글게 5px, 안여백 20px, 너비 400px, 밖여백 30px 자동(가운데정렬)*/
+	   #signup{
+		   background-color: #fff;
+		   border: 1px solid #222;
+		   border-radius: 5px;
+		   padding: 20px;
+		   width: 400px;
+		   margin: 30px auto;
+	   }
+    /* id="signup" 자손 fieldset  테두리선 1px 실선 #ccc, 아래밖여백 30px*/
+    #signup fieldset{
+		border: 1px solid #ccc;
+		margin-bottom: 30px;
+	}
+    /* id="signup" 자손 legend   글자크기 16px, 글자굵기 진하게, 왼쪽안여백 5px
+                               아래안여백 10px*/
+    #signup legend{
+		font-size: 16px;
+		font-weight: bold;
+		padding-left: 5px;
+		padding-bottom: 10px;
+	}
+                               
+    /* id="signup" 자손 ul 자손 li   줄간격 30px, 목록스타일 없음, 
+       안여백 5px 10px   아래밖여백 2px*/  
+       #signup ul li{
+		   line-height: 30px;
+		   list-style: none;
+		   padding: 5px 10px;
+		   margin-bottom: 2px;
+	   }
+        
+    /* id="signup" 자손 button  테두리선 1px 실선 #222 ,
+    모서리 둥글게 20px, 글자크기 16px, 글자간격 1px, 밖여백 자동, 안여백 7px 25px
+       배치(display)  block*/  
+       #signup button{
+		   border: 1px solid #222;
+		   border-radius: 20px;
+		   font-size: 16px;
+		   letter-spacing: 1px;
+		   margin: auto;
+		   padding: 7px 25px;
+		   display: block;
+	   }
+       /* id="signup" 자손 label 어울림 left, 글자크기 13px, 너비 110px*/ 
+        #signup label{
+			font-size: 13px;
+			width: 110px;
+			float: left;
+		}   
+		
+		/* p335 id="signup" 자손 input태그 type 속성 text 찾기, 
+		        id="signup" 자손 input태그 type 속성 password 찾기,
+		        id="signup" 자손 input태그 type 속성 tel 찾기,
+		        id="signup" 자손 input태그 type 속성 email 찾기,
+		        
+		        
+		 #signup  input[type=text],#signup  input[type=password],
+		 #signup  input[type=tel], #signup  input[type=email]
+		 
+		                    테두리선 1px 실선 #ccc 
+		                    모서리둥글게 3px
+		                    글자크기 13px
+		                    안여백 5px
+		                    너비 200px 
+		                    
+		    p350   input type=radio 제외하고 적용 */ 
+		                    
+		 #signup  input:not([type=radio]) {
+			 border: 1px solid #ccc;
+			 border-radius: 3px;
+			 font-size: 13px;
+			 padding: 5px;
+			 width: 200px;
+		 }              
+		                    
+		/* p334 id="signup" 자손 input태그 required 속성 찾기 
+		                    테두리선 1px 실선 빨간색 */
+		#signup  input[required]{
+			border: 1px solid red;
+		}
+		/* p334 id="signup" 자손 input태그 readonly 속성 찾기 
+		                    테두리선 없음 */   
+		#signup  input[readonly]{
+			border: none;
+		}
+		
+		/* p348 #signup fieldset:last-of-type 마지막 
+		#signup fieldset:nth-of-type(3)
+		#signup fieldset:last-of-type
+		
+		테두리선 none, 밖아래여백 0 */
+		#signup fieldset:last-of-type{
+			border: none;
+			margin-bottom: 0px;
+		}
+        
+       	/* p349 #signup button:hover  
+		배경색 #222, 글자색 #fff */    
+		#signup button:hover{
+			background-color: #222;
+			color: #fff;
+		}                                  
+</style>
+</head>
+<body>
+  <form id="signup">
+    <fieldset>
+      <legend>로그인 정보</legend>
+      <ul>
+        <li>
+          <label>아이디</label>
+          <input name="userid" type="text" required autofocus>
+        </li>
+        <li>
+          <label>비밀번호</label>
+          <input name="pwd1" type="password"  required>
+        </li>
+        <li>
+          <label>비밀번호 확인</label>
+          <input name="pwd2" type="password" required>
+        </li>  
+        <li>
+          <label>회원 등급</label>
+          <input name="level" type="text" readonly value="준회원">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label>이름</label>
+          <input name="fullname" type="text" placeholder="5자미만 공백없이" required>
+        </li>
+        <li>
+          <label>메일 주소</label>
+          <input name="email" type="email" placeholder="abcd@domain.com" required autocomplete="off">
+        </li>
+        <li>
+          <label>연락처</label>
+          <input name="tel" type="tel" autocomplete="off">
+        </li>  
+      </ul>
+    </fieldset>
+    <fieldset>
+      <button type="submit"> 제출 </button> 
+    </fieldset>
+  </form>
+</body>
+</html>

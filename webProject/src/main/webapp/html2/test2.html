@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>html2/test2.html</title>
+</head>
+
+<body>
+	<!--231103-->
+	<h1>폼 태그(양식태그)</h1>
+	
+	<form action="test1.html" method="post">
+	<!--아이디 : <input type=" text" name="id" value="id를 입력하세요."><br>-->
+		<!--value값은 생략가능 value값은 사용자가 작성-->
+		아이디 : <input type="text" name="id">
+		비밀번호 : <input type="password" name="pw"><br>
+		<!--서버에 전달할 이름으로 name을 붙여줌,즉 name =''값은 변수명-->
+		<!--<input type="button" value="로그인">-->
+		<!--button은 자바스크립트로 기능을 넣을 수 있다.-->
+		<input type="submit" value="로그인">
+		<p>submit 버튼을 클릭하면 form 태그 안에 정보(아이디 비밀번호) 입력한 값을 서버에 전달</p>
+		<p>action="test1.html" 하이퍼링크 연결</p>
+		<p>실행하면 주소값이 http://localhost:8080/webProject/html2/test1.html?id=kim&pw=123</p>
+		<p>method="get" 주소줄에 값이 보이면서 전달(기본값)<br>method="post" 주소줄에 값이 안 보이면서 전달(보안상 좋은 방식)<br> </p>
+	</form>
+	
+
+
+
+</body>
+
+</html>

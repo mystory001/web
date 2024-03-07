@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--231110-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test8.html</title>
+<style>
+	div, h1, p { /* 큰 영역(문단 영역, 문단 전체) → 블록레벨 요소(태그) → h1, div, p 
+		   작은 영역(태그 요소 영역) → 인라인 레벨 → span, img, strong,...  
+		   내용 영역 크기 width, height
+		   안 여백 영역 padding
+		   밖 여백 영역 margin 
+		   px, %, auto(영역 내용에 따라서 자동으로 적용)*/
+		border: 10px solid blue; 
+		width: 100px; height: 50px;
+		padding: 10px;
+		margin : 20px;
+		/*박스 모델의 크기를 계산하는 속성 box-sizing : content-box(기본값), border-box(테두리선 기준)*/
+		box-sizing: border-box;}
+</style>
+</head>
+<body>
+바디 영역
+<h1>제목영역</h1>
+<div>큰 영역 <span>작은 영역</span></div>
+<p>문단 영역</p>
+</body>
+</html>

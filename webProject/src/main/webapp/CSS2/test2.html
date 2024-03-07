@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test2.html</title>
+<!--p326  2)속성 선택자 (특정한 조건 선택자)
+            - 태그[찾는속성]  속성있는것 찾기
+            - 태그[찾는속성=찾는값] 일치하는 값
+            - 태그[속성 ~= 값] 값을 포함(독립적 단어)
+            - 태그[속성 |= 값] 값을 포함(모든 포함하는 단어)
+            - 태그[속성 ^= 값] 시작하는 값
+            - 태그[속성 $= 값] 끝나는 값
+            - 태그[속성 *= 값] 일부 속성값이 일치하는 (포함하는 값)-->
+<style>
+	a[href]{
+		color: blue;
+	}
+	a[target=_blank]{
+		color: purple;
+	}
+	a[class~=button]{
+		color: green;
+	}
+	a[class|=us]{
+		color: red;
+	}
+	a[class^=eng]{
+		color: yellow;
+	}
+	a[href$=jpg]{
+		background-color: pink;
+	}
+	a[href*=w3]{
+		background-color: skyblue;
+	}
+</style>            
+</head>
+<body>
+<ul>
+	<li><a>메인메뉴</a></li>
+	<li><a href="ex1.html" target="_blank">메뉴1</a></li>
+	<li><a href="ex1.html" class="button">메뉴2</a></li>
+	<li><a href="ex1.html" class="flat button">메뉴3</a></li>
+	<li><a href="ex1.html" class="us-english">메뉴4</a></li>
+	<li><a href="ex1.html" class="english">메뉴5</a></li>
+	<li><a href="../css1/cat.jpg">메뉴6</a></li>
+	<li><a href="http://www.w3.org">메뉴7</a></li>
+</li>
+</body>
+</html>

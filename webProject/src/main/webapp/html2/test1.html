@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html2/test1.html</title>
+</head>
+<body>
+<!--231102-->
+<h1>입력 양식(폼 태그) 작성하기</h1>
+<p>폼 태그는 서버에 연결하는 역할 <br>로그인, 회원가입, 검색 화면, 게시판 글쓰기,...</p>
+<!--입력하겠다는 태그 input, 그 입력 타입을 어떻게 할 것인지를 하는 속성을 써줘야함-->
+
+<!--text는 한 줄-->
+아이디 : <input type="text" name="id" value="id를 입력"><br>
+<!--password는 입력 내용이 보이지 않음-->
+비밀번호 : <input type="password" name="pw"><br>
+<!--여러 줄 글자를 쓰기 위한 태그 textarea-->
+<!--textarea 태그 사이에는 value값-->
+<!--textarea의 크기는 (rows="x" cols="y")으로 결정. 글자수제한은 minlength나 maxlength를 이용-->
+자기소개 : <textarea rows="10" cols="20" maxlength="100" name="intro">자기소개를 해주세요.</textarea><br>
+<!--라디오 버튼 둘 중 하나 선택 name이 같은경우 하나만 선택 가능. ex) name=gender
+ name이 다를 경우 중복 선택 가능. ex) name=gender1 name=gender2-->
+성별 : <input type="radio" name="gender" value="남">남성
+      <input type="radio" name="gender" value="여">여성<br>
+<!--name이 다를 경우 ex)-->
+<!--<input type="radio" name="gender1" value="남">남성-->
+<!--<input type="radio" name="gender2" value="여">여성<br>-->
+<!--체크박스 모두 선택 가능, name이 동일해야함-->
+취미 : <input type="checkbox" name="hobby" value="컴퓨터">컴퓨터
+<input type="checkbox" name="hobby" value="여행">여행
+<input type="checkbox" name="hobby" value="게임">게임
+<input type="checkbox" name="hobby" value="운동">운동
+<input type="checkbox" name="hobby" value="독서">독서<br>
+<!--목록상자는 목록 중 하나 선택-->
+회원 등급 :
+<select name="grade">
+	<option value="목1">목록1</option>
+	<option value="목2">목록2</option>
+	<option value="목3">목록3</option>
+</select><br>
+<!--button은 기능이 없음. JS로 기능을 넣어줄수있음.-->
+<input type="button" value="회원가입"> <input type="button" value="ID찾기"> <input type="button" value="PW 찾기">
+
+
+
+</body>
+</html>

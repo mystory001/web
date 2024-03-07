@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS2/test12.html</title>
+<style>
+	 .container {
+		 width: 100%; height: 150px; background-color: #eee; border: 1px solid #222; margin-bottom: 30px; display: flex; align-items: center;
+	 }
+	 .box{
+		 padding: 5px 45px; margin: 5px; background-color: #222;
+	 }
+	 #box1 {
+		 align-self: flex-start;
+	 }
+	 #box3 {
+		 align-self: stretch;
+	 }
+	 p {
+		 color: #fff; text-align: center;
+	 }
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="box" id="box1"><p>11</p></div>
+	<div class="box"><p>12</p></div>
+	<div class="box" id="box3"><p>13</p></div>	
+	<div class="box"><p>14</p></div>	
+</div>
+</body>
+</html>

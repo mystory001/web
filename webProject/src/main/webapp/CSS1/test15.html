@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test15.html</title>
+<!--p281~283
+배치방법 position(static(기본값),
+              relative(static 비슷 => 위치 지정, 상대적),
+              absolute(상위요소 기준으로 위치 지정,절대적),
+              fixed(브라우저 창 기준으로 지정)) 
+-->
+<style>
+	#static{
+		width: 300px;
+		height: 200px;
+		border: 1px dotted silver;
+		position: static;
+	}
+	#relative1{
+		width: 300px;
+		height: 200px;
+		border: 1px dotted silver;
+		position: relative;
+	}
+	#relative2{
+		width: 300px;
+		height: 200px;
+		border: 1px dotted silver;
+		position: relative;
+		left: 100px;
+		top: -50px;
+	}
+	#fixed{
+		width: 100px;
+		height: 100px;
+		background-color: pink;
+		position: fixed;
+		right: 30px;
+		top: 30px;
+	}
+</style>
+</head>
+<body>
+<p id="static">1.본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+	본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+	본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+</p>
+<p id="relative1">2.본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+	본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+	본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+</p>
+<p id="relative2">3.본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+	본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+	본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
+</p>
+<p id="fixed"></p>
+
+</body>
+</html>

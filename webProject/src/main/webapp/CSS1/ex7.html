@@ -1,0 +1,51 @@
+<!--231113-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/ex7.html</title>
+<!--p273~276-->
+<style>
+	/* id="container" 가운데 정렬 */
+	#container{
+		margin: 0px auto;
+		width: 1200px;
+	}
+	/* id="header" 너비 1200px, 높이 120px, 배경색*/
+	#header{
+		width: 1200px;
+		height: 120px;
+		background-color: skyblue;
+	}
+	/* id="sidebar" 너비 300px, 높이 600px, 배경색, 왼쪽 어울림*/
+	#sidebar{
+		width: 300px;
+		height: 600px;
+		background-color: pink;
+		float: left;
+	}
+	/* id="contents" 너비 900px, 높이 600px, 배경색, 왼쪽 어울림*/
+	#contents{
+		width: 900px;
+		height: 600px;
+		background-color: silver;
+		float: left;
+	}
+	/* id="footer" 너비 1200px, 높이 100px, 배경색, 어울림 해제 */
+	#footer{
+		width: 1200px;
+		height: 100px;
+		background-color: skyblue;
+		clear: left;
+	}
+</style>
+</head>
+<body>
+<div id="container">
+	<div id="header">헤더</div>
+	<div id="sidebar">사이드바</div>
+	<div id="contents">본문</div>
+	<div id="footer">푸터</div>
+</div>
+</body>
+</html>

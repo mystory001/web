@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html2/ex3</title>
+</head>
+<body>
+<!--p.153-->
+<!--231103 실습-->
+<!--231107 확인-->
+<!--아이디 상자에 자동 포커스, 설명글 "4자~10자 사이, 공백 없음""-->
+<!--이메일 필수 조건-->
+<!--비밀번호 설명글, 필수 조건-->
+<!--비밀버호 확인 필수 조건-->
+<h1>회원 가입을 환영합니다</h1>
+<form action="ex2.html" method="post">
+	<fieldset>
+		<legend>사용자 정보</legend>
+		<ul>
+			<li><label>아이디 </label><input type="text" name="text" autofocus required placeholder="4자 ~ 10자 사이, 공백없이"></li>
+			<li><label>이메일 </label><input type="email" name="email" required></li>
+			<li><label>비밀번호 </label><input type="password" name="pw1" required placeholder="문자와 숫자, 특수 기호 포함"></li>
+			<li><label>비밀번호 확인 </label><input type="password" name="pw2" required></li>
+<!--			231107-->
+			<il><label>가입경로 <select name="path">
+				<option value="path1">블로그</option>
+				<option value="path2">검색</option>
+				<option value="path3">SNS</option>
+				<option value="path4">기타</option></label></select></li>
+			<li><label>메모 </label><textarea name="memo" rows="5" cols="20" placeholder="남길 말씀이 있다면 여기에"></textarea></li>
+		</ul>		
+	</fieldset>
+<!--		태그 속성=값-->
+	<fieldset>
+		<legend>이벤트와 새로운 소식</legend>
+		<input type="radio" name="radio">메일 수신
+		<input type="radio" name="radio" checked>메일 수신 안함
+	</fieldset>
+	
+<input type="submit" name="submit" value="가입하기">
+<input type="reset" name="reset" value="취소">
+
+	
+</form>
+
+</body>
+</html>

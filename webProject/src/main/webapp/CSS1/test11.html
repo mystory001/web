@@ -1,0 +1,48 @@
+<!--231113-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test11.html</title>
+<!--p260~268 밖여백, 안여백-->
+<style>
+	div{
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+	}
+	#margin1{
+		margin: 50px; /*모두*/
+		margin: 30px 50px; /* 위아래  왼오른쪽*/
+		margin: 30px 50px 100px 200px;
+		padding: 20px;
+	}
+	/* 마진 중첩 => 밖여백 겹쳐짐 */
+	#margin2{
+		margin: 50px;
+		padding: 20px;
+	}
+	#margin3{
+		margin: 50px;
+		padding: 20px;
+	}
+	#margin4{
+		margin: 50px;
+		padding: 20px;
+	}
+	#container{
+		/* 왼쪽 오른쪽 가운데 정렬 */
+		margin: 0px auto;
+		padding: 20px;
+	}
+</style>
+</head>
+<body>
+	<div id="container">
+<div id="margin1">레드향1</div>
+<div id="margin2">레드향2</div>
+<div id="margin3">레드향3</div>
+<div id="margin4">레드향4</div>
+	</div>
+</body>
+</html>

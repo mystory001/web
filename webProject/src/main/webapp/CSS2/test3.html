@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test3.html</title>
+<!--p336 3)가상 클래스 (:hover, 순서) 사용자 동작에 반응
+           가상요소(::요소 추가)-->
+<style>
+	.navi ul li{
+		list-style: none;
+		float: left;
+		width: 150px;
+		padding: 10px;
+		
+	}
+	/* 방문하지 않은 링크, 방문한 링크 */ 
+	.navi a:link, .navi a:visited{
+		/*글자크기 14px, 글자색 #000, 안여백 10px, 밑줄 없앰 
+		작은영역 큰영역으로 변경 */
+		font-size: 14px;
+		color: #000;
+		padding: 10px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+	}
+	.navi a:hover{
+		/* 배경색 #222 글자색 #fff */
+		background-color: #222;
+		color: #fff;
+	}
+	.navi a:active{
+		background-color: red;
+	}
+	#intro{
+		clear: left;
+		width: 300px;
+		border: 1px solid black;
+	}
+	#room{
+		clear: left;
+		width: 300px;
+		border: 1px solid black;
+	}
+	/* 대상에 스타일 적용하는 :target 가상클래스 선택자 */
+	#intro:target{
+		background-color: blue;
+		color: white;
+	}
+	/* #room 클릭하면 연결되어있는 곳 스타일 변경 
+	   배경색 yellow, 글자색 green */
+	   #room:target{
+		   background-color: yellow;
+		   color: green;
+	   }
+	  /* 라디오 클릭(체크) :checked 인접형제태그 label
+	   글자색 빨간색 , 글자굵기 진하게 */
+	   input:checked + label{
+		   color: red;
+		   font-weight: bold;
+	   }
+	  /*  input type  radio 찾아서 제외 하고 나머지 스타일 
+	  input[type=text],input[type=tel]
+	  => 변경  input:not([type=radio]) 
+	    :not([조건]) */
+	   input:not([type=radio]){
+		   border: 1px solid blue;
+		   border-radius: 3px;
+		   padding: 5px;
+		   width: 200px;
+	   }
+</style>           
+</head>
+<body>
+	<fieldset>
+		<legend>개인정보</legend>
+		<label>이름</label>
+		<input type="text" name="name">
+		<br>
+		<label>연락처</label>
+		<input type="tel" name="tel">
+	</fieldset>
+	<fieldset>
+		<legend>객실형태</legend>
+		<input type="radio" name="room">
+		<label>기본형</label>
+		<br>
+		<input type="radio" name="room">
+		<label>가족형</label>
+	</fieldset>
+<div class="navi">
+	<ul>
+		<li><a href="#intro">이용 안내</a></li>
+		<li><a href="#room">객실 소개</a></li>
+		<li><a href="test1.html">예약 방법</a></li>
+		<li><a href="test1.html">예약 하기</a></li>
+	</ul>
+</div>
+
+<div id="intro">
+	<h2>이용안내</h2>
+	<p>이용안내내용</p>
+</div>
+<div id="room">
+	<h2>객실 소개</h2>
+	<p>객실 소개 내용</p>
+</div>
+</body>
+</html>

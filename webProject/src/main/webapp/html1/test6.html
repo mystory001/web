@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test6</title>
+</head>
+<body>
+
+<h1>하이퍼링크 삽입하기</h1>
+<p>하이퍼링크는 다양한 파일 형식을 넣을 수 있다.</p>
+<a href="https://www.naver.com">네이버</a><br>
+<a href="test1.html">test1</a><br>
+<a href="ex1.html">ex1</a><br>
+<a href="../imgs/img/7.jpg">7.jpg</a><br>
+<a href="medias/product.pdf">product.pdf</a><br>
+
+<h1>하이퍼링크 새로운 창에서 연결하기</h1>
+<p>target="_blank"를 a태그에 넣어주면 된다.</p>
+<a href="https://www.naver.com" target="_blank">네이버</a><br>
+<a href="test1.html"target="_blank">test1</a><br>
+<a href="ex1.html"target="_blank">ex1</a><br>
+<a href="../imgs/img/7.jpg"target="_blank">7.jpg</a><br>
+<a href="medias/product.pdf" target="_blank">product.pdf</a><br>
+
+<h1>이미지에 하이퍼링크 삽입하기</h1>
+<p>a태그+img태그</p>
+<a href="test2.html" target="_blank"><img src="1.jpg"></a><br>
+<a href="test3.html" target="_blank"><img src="img/3.jpg"></a><br>
+
+<h1>하이퍼링크에 걸린 파일을 다운로드하기</h1>
+<p> a태그 href="파일명" download" </p>
+<a href="../imgs/5.jpg" download>5.jpg</a><br>
+<a href="medias/product.pdf" download>product.pdf</a>
+
+<ol>
+	<li><a href="ex2.html">ex2.html 연결</a></li>
+	<li><a href="ex3.html" target="_blank">ex3.html 새창으로 연결</a></li>
+	<li><a href="2.jpg" download>2.jpg 다운로드</a></li>
+</ol>
+
+
+<dt>
+	<dd><a href="ex2.html">ex2.html 연결</a></dd>
+	<dd><a href="ex3.html" target="_blank">ex3.html 새창으로 연결</a></dd>
+	<dd><a href="2.jpg" download>2.jpg 다운로드</a></dd>
+</dt>
+
+<!--하이퍼링크는 페이지를 연결-->
+<!--주소 입력 → 웹 서버 → 페이지를 찾고 test6.html → 응답한다 → 사용자 컴퓨터로 출력-->
+<!--서버에서 요청한다.-->
+<!--하이퍼링크는 주소가 바뀐다. 주소가 바뀌면서 서버에서 페이지를 찾아서 가져와서 화면에 보여준다.-->
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS2/test10.html</title>
+<style>
+	.container {
+		 background-color: #eee; border: 1px solid #222; margin-bottom: 30px; display: flex;
+	 }
+	 .box{
+		 padding: 5px 45px; margin: 5px; background-color: #222;
+	 }
+	 #opt1 {
+		 justify-content: flex-start;
+	 }
+	 #opt2 {
+		 justify-content: flex-end;
+	 }
+	 #opt3 {
+		 justify-content: center;
+	 }
+	 #opt4 {
+		 justify-content: space-between;
+	 }
+	 #opt5 {
+		 justify-content: space-around;
+	 }
+	 p {
+		 color: #fff; text-align: center;
+	 }
+</style>
+</head>
+<body>
+<div class="container" id="opt1">
+	<div class="box"><p>11</p></div>
+	<div class="box"><p>12</p></div>
+	<div class="box"><p>13</p></div>	
+</div>
+<div class="container" id="opt2">
+	<div class="box"><p>21</p></div>
+	<div class="box"><p>22</p></div>
+	<div class="box"><p>23</p></div>	
+</div>
+<div class="container" id="opt3">
+	<div class="box"><p>31</p></div>
+	<div class="box"><p>32</p></div>
+	<div class="box"><p>33</p></div>	
+</div>
+<div class="container" id="opt4">
+	<div class="box"><p>41</p></div>
+	<div class="box"><p>42</p></div>
+	<div class="box"><p>43</p></div>	
+</div>
+<div class="container" id="opt5">
+	<div class="box"><p>51</p></div>
+	<div class="box"><p>52</p></div>
+	<div class="box"><p>53</p></div>	
+</div>
+
+</body>
+</html>

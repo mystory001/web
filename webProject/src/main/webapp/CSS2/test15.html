@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS2/test15.html</title>
+<style>
+	#wrapper{width: 700px; display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,100px);}
+	.items{padding: 15px; color: #fff; font-weight: bold;text-align: center;}
+	.box1{background-color: blue; grid-column: 1/4;}
+	.box2{background-color: green; grid-row: 2/4;}
+	.box3{background-color: orange; grid-column: 2/4; grid-row-start: 2;}
+	.box4{background-color: red; grid-column-start: 3; grid-row-start: 3;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div class="items box1">1. ㅂㅈㄷㄱ</div>
+	<div class="items box2">2. qwer</div>
+	<div class="items box3">3. ㅁㄴㅇㄹ</div>
+	<div class="items box4">4. asdf</div>
+</div>
+</body>
+</html>

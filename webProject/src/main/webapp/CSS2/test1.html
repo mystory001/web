@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test1.html</title>
+<!--p319 CSS 고급선택자 1)연결 선택자(하위(자손)선택자, 자식선택자, 형제선택자, 인접 형제선택자)
+               2)속성 선택자 (특정한 조건 선택자)
+               3)가상 클래스 (:hover, 순서), 가상요소(::요소 추가)-->
+<style>
+	/* 하위(자손)선택자 => 상위태그 하위태그 { } */
+	#contents p{
+		color: blue;
+	}
+	/* 자식선택자 => 상위태그 > 하위태그 */
+	#contents > p{
+		color: red;
+	}
+	/*형제선택자 => 태그 ~ 태그 => 같은레벨 태그*/
+	h2 ~ h3 {
+		color: green;
+	}
+	/*인접 형제선택자 => 태그 + 태그 => 같은레벨 인접 태그*/
+	h2 + h3{
+		color: purple;
+	}
+</style>               
+</head>
+<body>
+<div id="contents">
+<h1>제목1</h1>
+<p>본문 내용</p>
+<div>
+	<p>div안에 있는 본문 내용1</p>
+	<p>div안에 있는 본문 내용2</p>
+</div>
+<h2>제목2</h2>
+<h3>제목3</h3>
+<h3>제목3</h3>
+<h3>제목3</h3>
+</div>
+</body>
+</html>

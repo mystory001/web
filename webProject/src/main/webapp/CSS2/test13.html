@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS2/test13.html</title>
+<style>
+	.container {
+		 width: 200px; height: 150px; background-color: #eee; border: 1px solid #222; margin : 30px; float: left; 
+		 display: flex; flex-flow: row wrap;
+	 }
+	 .box{
+		 width: 80px; background-color: #222; border: 1px dotted #e9e9e9;
+	 }
+	 #opt1 {
+		 align-items : flex-start;
+	 }
+	 #opt2 {
+		 align-content : flex-end;
+	 }
+	 #opt3 {
+		 align-content : center;
+	 }
+	 #opt4 {
+		 align-content : space-between;
+	 }
+	 #opt5 {
+		 align-content : space-around;
+	 }
+	 #opt6 {
+		 align-content : stretch;
+	 }
+	 p {
+		 color: #fff; text-align: center;
+	 }
+</style>
+</head>
+<body>
+<div class="container" id="opt1">
+	<div class="box"><p>11</p></div>
+	<div class="box"><p>12</p></div>
+	<div class="box"><p>13</p></div>	
+	<div class="box"><p>14</p></div>	
+</div>
+<div class="container" id="opt2">
+	<div class="box"><p>21</p></div>
+	<div class="box"><p>22</p></div>
+	<div class="box"><p>23</p></div>	
+	<div class="box"><p>24</p></div>	
+</div>
+<div class="container" id="opt3">
+	<div class="box"><p>31</p></div>
+	<div class="box"><p>32</p></div>
+	<div class="box"><p>33</p></div>	
+	<div class="box"><p>34</p></div>	
+</div>
+<div class="container" id="opt4">
+	<div class="box"><p>41</p></div>
+	<div class="box"><p>42</p></div>
+	<div class="box"><p>43</p></div>	
+	<div class="box"><p>44</p></div>	
+</div>
+<div class="container" id="opt5">
+	<div class="box"><p>51</p></div>
+	<div class="box"><p>52</p></div>
+	<div class="box"><p>53</p></div>	
+	<div class="box"><p>54</p></div>	
+</div>
+<div class="container" id="opt6">
+	<div class="box"><p>61</p></div>
+	<div class="box"><p>62</p></div>
+	<div class="box"><p>63</p></div>	
+	<div class="box"><p>64</p></div>	
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="veiwport" content="width=device-width", initial-scale="1">
+<title>CSS2/test7.html</title>
+<!--그리드 레이아웃(p.409)
+반응형 웹 : 화면 너비에 따라서 웹 문서 요소 재배치
+그리드 레이아웃 : 여러 개의 컬럼으로 나눈 후 메뉴, 본문, 이미지 등의 웹 요소를 화면에 맞게 배치
+ 플렉서블 박스 레이아웃 : 그리드 레이아웃 기준으로 박스를 원하는 위치 배치
+ CSS 그리드 레이아웃 : 그리드 레이아웃을 기준으로 박스를 사용할 때 주축 기준으로 요소 배치-->
+ <style>
+	 .container {
+		 width: 700px; background-color: #eee; border: 1px solid #222; margin-bottom: 30px; display: flex;
+	 }
+	 /*플렉스 컨테이너 지정(플렉스 영역 지정) display: flex 컨테이너 안에 플렉스 항목으로 블록 레벨 요소 배치*/
+	 .box{
+		 padding: 5px 45px; margin: 5px; width: 80px; background-color: #222;
+	 }
+	 #opt1 {
+	/*플렉스 방향 지정 flex-direction 속성*/ flex-direction: row;
+	 }
+	 #opt2 {
+		 flex-direction: row-reverse;
+	 }
+	 #opt3 {
+		 flex-direction: column;
+	 }
+	 #opt4 {
+		flex-direction: column-reverse; 
+	 }
+	 p {
+		 color: #fff; text-align: center;
+	 }
+ </style>
+</head>
+<body>
+<div class="container" id="opt1">
+	<div class="box"><p>11</p></div>
+	<div class="box"><p>12</p></div>
+	<div class="box"><p>13</p></div>	
+</div>
+<div class="container" id="opt2">
+	<div class="box"><p>21</p></div>
+	<div class="box"><p>22</p></div>
+	<div class="box"><p>23</p></div>	
+</div>
+<div class="container" id="opt3">
+	<div class="box"><p>31</p></div>
+	<div class="box"><p>32</p></div>
+	<div class="box"><p>33</p></div>	
+</div>
+<div class="container" id="opt4">
+	<div class="box"><p>41</p></div>
+	<div class="box"><p>42</p></div>
+	<div class="box"><p>43</p></div>	
+</div>
+</body>
+</html>

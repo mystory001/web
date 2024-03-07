@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test5.html</title>
+<!-- p346 가상요소(::요소 추가)
+::first-line 첫째줄, ::first-letter 첫번째 글자, 
+::before 앞, ::after 뒤 -->
+<style>
+	li.new::after{
+		content: "NEW!!";
+		font-size: x-small;
+		padding: 2px 4px;
+		margin: 0px 10px;
+		border-radius: 2px;
+		background-color: red;
+		color: white;
+	}
+</style>
+</head>
+<body>
+<h1>제목 목록</h1>
+<ul>
+	<li class="new">제품 A </li>
+	<li>제품 B </li>
+	<li>제품 C </li>
+	<li class="new">제품 D </li>
+</ul>
+</body>
+</html>

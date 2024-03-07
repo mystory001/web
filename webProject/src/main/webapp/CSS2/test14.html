@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS2/test14</title>
+<style>
+	#wrapper{/*width: 600px;*/ display: grid; /*grid-template-columns: 200px 200px 200px; grid-template-rows: 100px;*/
+	/* grid-template-columns: 1fr 1fr 1fr;*/ grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); grid-template-rows: minmax(100px,auto);
+	grid-column-gap: 30px; grid-row-gap: 20px;}
+	.items {padding: 10px; background-color: #eee;}
+	.items:nth-child(odd){background-color: #bbb;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div class="items">1. ㅂㅈㄷㄱ</div>
+	<div class="items">2. qwer</div>
+	<div class="items">3. ㅁㄴㅇㄹ</div>
+	<div class="items">4. asdf</div>
+	<div class="items">5. zxcv</div>
+</div>
+</body>
+</html>

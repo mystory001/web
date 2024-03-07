@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html2/ex2</title>
+</head>
+<body>
+<!--p.151-->
+<!--231103 실습-->
+<!--231107 확인-->
+<form action="test1.html" method="get">
+	<fieldset>
+		<legend>배송정보</legend>
+<!--		 legend : 제목-->
+		<label>주문 상품 </label><input type="text" name="product_name" value="상품용 3KG" readonly><br>
+<!--		readonly : 수정 못하고 읽기만 가능하게 끔-->
+		<label>이름 </label><input type="text" name="name" autofocus><br>
+<!--		autofocus 속성 : 자동적으로 커서가 가 있도록 함-->
+		<label>배송 주소 </label><input type="text" name="address" required><br>
+<!--		required 필수 조건을 제어-->
+		<label>이메일</label><input type="email" name="email"><br>
+		<label>연락처 </label><input type="tel" name="tel" value="하이픈 빼고 입력해주세요"placeholder="하이픈 빼고 입력해주세요"><br>
+<!--		placeholder=" " : 텍스트 상자에 설명을 하고자 할 때. 설명글-->
+		<label>배송 지정 <input type="date" name="date">(주문일로부터 최소 3일 이후)</label><br> 
+<!--		 label은 디자인 적용하기 위해 사용-->
+<!--		231107-->
+		<textarea name="memo" rows="5" cols="30" placeholder="메모를 입력해주세요"></textarea>
+	</fieldset>
+	<input type="submit" name="submit" value="주문하기">
+	<input type="reset" name="reset" value="취소하기">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/ex2.html</title>
+<!--p64 ~ 71 시맨틱태그 : 웹문서 구조를 만듬 (화면상에서는 별 차이가 없음.)
+   <header> 헤더영역
+   <nav> 메뉴(내비게이션)영역	  
+   <main> 내용을 담는 태그
+   <article> 독립적 내용 담는 태그
+   <section> 내용영역
+   <aside> 사이드바
+   <footer> 푸터영역	     	   	     -->
+<style>
+
+* {margin:0px; padding: 0px; box-sizing: border-box;}
+/*  전체영역  밖여백 0, 안여백 0, box-sizing : border-box */
+a {text-decoration: none;}
+/* a 밑줄 없앰 */
+ul {list-style: none;}
+/* ul 목록 스타일 none */
+#contaniner {margin: 0px auto; background-color: white; width: 1200px;}
+/* id="container" 밖여백 위아래 0px 왼쪽오른쪽 가운데 auto 배경색 흰색 , 너비 1200px*/
+header {width: 100%; height: 100px; background-color: #045;}
+/* header 너비 100%, 높이 100px, 배경색 #045  */
+#logo {width: 250px; height: 100px; line-height: 100px; padding-left: 20px; float: left;}
+/* id="logo" 너비 250px, 높이 100px, 줄간격 100px, 안 왼쪽여백 20px 왼쪽으로 어울림 */
+#logo h1 {font-weight: 700; font-size: 40px; color: white; text-shadow: 0 -1px 0 #222;}
+/* id="logo" h1  글자굵기 700, 글자크기 40px, 글자색 흰색, text-shadow : 0 -1px 0 #222 */
+nav {width: 900px; height: 100px; padding-top: 40px; float: right;}
+/* nav  너비 900px, 높이 100px, 안 위쪽여백 40px, 오른쪽으로 어울림   */
+#topMenu {height: 60px;}
+/* id="topMenu" 높이 60px   */
+#topMenu li {float: left; position: relative;}
+/* id="topMenu" li 왼쪽으로 어울림, position:relative */
+#topMenu li a {display: block; font-size: 1.1em; color: white; font-weight: 600; padding: 20px 60px;}
+/* id="topMenu" li a display : block, 글자크기 1.1em, 글자색 흰색, 글자 굵기 600,  안여백 위아래 20px 왼오른 60px, */
+#topMenu li a:hover {color: #1fa8f8; text-shadow: 0 -2px #222;}
+/* id="topMenu" li a:hover  글자색 #1fa8f8, text-shadow:0 -2px #222  */
+
+main {width: 1000px; margin: 50px auto;}
+/* main태그  너비 1000px  밖여백 위아래 50px 왼오른쪽 가운데*/
+main section {padding-top: 60px;}
+/* main section 태그 밖 위여백 60px */
+main h2 {font-size: 1.5em; line-height: 2.5;}
+/* main h2태그 글자크기 1.5em, 줄간격 2.5 */
+main div {padding-top: 20px;}
+/* main div  밖 위여백 20px */
+main h3 {font-size: 1.2em; line-height: 2.2;}
+/* main h3 글자크기 1.2em, 줄간격 2.2 */
+.detail p {line-height: 2.0; color: #222;}
+/* class="detail" p 태그  줄간격 2.0, 글자색 #222 */
+.detail img {float: left; padding-right: 50px; border-radius: 20px;}
+/* class="detail" img 태그  왼쪽으로 어울림 , 밖 오른쪽여백 50px, 테두리선 둥글게 20px */ 
+
+footer {width: 1200px; height: 100px; border-top : 2px soild #222;}
+/* footer태그 너비 1200px, 높이 100px, 테두리 위 2px 실선 #222 */
+#bottomMeun {width: 100%; height: 20px; padding-left: 60px;}
+/* id="bottomMenu" 너비 100%, 높이 20px, 밖 왼쪽여백 60px */
+#bottomMeun ul {margin-top: 15px;}
+/* id="bottomMenu" ul 밖 위쪽여백 15px*/
+#bottomMeun ul li {float: left; padding: 5px 20px; border-right: 1px dotted #ddd;}
+/* id="bottomMenu" ul li  왼쪽으로 어울림, 안여백 위아래 5px 왼오른쪽 20px, 테두리 오른쪽 1px 실선 #ddd*/
+#bottomMeun ul li:last-of-type {border: none;}
+/* id="bottomMenu" ul li:last-of-type 테두리선 없음*/
+#bottomMeun ul li a {font-size: 15px; color: #666;}
+/* id="bottomMenu" ul li a 글자크기 15px, 글자색 #666 */
+#bottomMeun ul li a:hover {text-decoration: underline; color: orange;}
+/* id="bottomMenu" ul li a :hover 글자스타일 밑줄, 글자색 orange; */
+</style>
+</head>
+<body>
+<div id="container">
+	<header>
+		<div id="logo">
+			<a href="test8.html"><h1>Dream Jeju</h1></a>
+		</div>
+		<nav>
+			<ul id="topMenu">
+				<li><a href="test1.html">단체 여행</a></li>
+				<li><a href="test2.html">맞춤 여행</a></li>
+				<li><a href="test3.html">갤러리</a></li>
+				<li><a href="test4.html">문의하기</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="headling">
+			<h2>몸과 마음이 치유되는 섬</h2>
+			<div class="detail">
+				<img src="healing.jpg">
+				<p><b>쉼(Healing)의 공간으로 안내합니다</b></p>          
+                <p>탁 트인 바다, 시원한 바람에 몸을 맡기고 뚜벅뚜벅 오름을
+                 오르고 올렛길을 걷다보면 온전히 나에게 집중할 수 있습니다. </p>   
+			</div>
+			<div class="schedule">
+			 <h3>상세 일정</h3>
+          <ul>
+            <li>여행 기간 : 2박 3일</li>
+            <li>여행 일정 : (여행 일정은 상담을 통해 결정 및 조정 가능합니다)</li>
+          </ul> 
+			</div>
+		</section>
+		<section id="activity">
+			<h2>다양한 액티비티가 기다리는 섬</h2>
+			<div class="detail">
+				<img src="activity.jpg">
+				<p><b>모험과 스릴이 넘치는 레저의 천국으로 안내합니다.</b></p>         
+          <p>둘러보기만 하는 여행을 하셨나요? </p>
+          <p>하늘을 날며 시원한 바다를 내려다보는 패러글라이등과 투명한 물빛 
+          속을 여행하는 스킨스쿠버... 아름다운 제주 해안도로를 씽씽 전동바이크나 
+          전동킥보드로 달려보세요. 시원한 바다를 가까이에서 느낄 수 있는 요트 
+          체험과 배낚시도 빼놓을 수 없겠죠?</p>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<section id="bottomMenu">
+		<ul>
+          <li><a href="test5.html">회사 소개</a></li>
+          <li><a href="test6.html">개인정보처리방침</a></li>
+          <li><a href="test7.html">여행약관</a></li>
+          <li><a href="test8.html">사이트맵</a></li>
+        </ul>
+		</section>
+	</footer>
+</div>
+</body>
+</html>
